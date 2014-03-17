@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_title" >
+    </include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <!-- Main Layout -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/location_title"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/heading_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" >
+
+                <RadioButton
+                    android:id="@+id/nearMeRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+
+                <Button
+                    android:id="@+id/nearMeSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_box_white"
+                    android:drawableRight="@drawable/spinner_drop_down_btn_selector"
+                    android:enabled="true"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="@string/near_me"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/provinceRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/provinceSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_box_white"
+                    android:drawableRight="@drawable/spinner_drop_down_btn_selector"
+                    android:enabled="false"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="Province"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textStyle="normal"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/citySpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_box_white"
+                    android:drawableRight="@drawable/spinner_drop_down_btn_selector"
+                    android:enabled="false"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="City"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/addressRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textStyle="normal" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/addressTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_box_white"
+                    android:completionThreshold="4"
+                    android:enabled="false"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/txt_address"
+                    android:imeOptions="actionSearch"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:text="@string/bedroom_title"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/heading_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/minBedTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_box_white"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/to"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+
+                <EditText
+                    android:id="@+id/maxBedTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_box_white"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="5"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/min_txt"
+                    android:textColor="@color/near_me_txt_color"
+                    android:textSize="@dimen/near_me_txt_size"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/minBedSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:progress="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="18dp"
+                    android:text="@string/max_txt"
+                    android:textColor="@color/near_me_txt_color"
+                    android:textSize="@dimen/near_me_txt_size"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/maxBedSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:progress="5" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:text="@string/price_title"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/heading_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="$"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+
+                <EditText
+                    android:id="@+id/minPriceTXt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_box_white"
+                    android:inputType="number"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/to"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+
+                <EditText
+                    android:id="@+id/maxPriceTXT"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_box_white"
+                    android:inputType="number"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="2000"
+                    android:textColor="@color/spinner_txt_color"
+                    android:textSize="@dimen/spinner_txt_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/min_txt"
+                    android:textColor="@color/near_me_txt_color"
+                    android:textSize="@dimen/near_me_txt_size"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/minPriceSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="2000"
+                    android:progress="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="18dp"
+                    android:text="@string/max_txt"
+                    android:textColor="@color/near_me_txt_color"
+                    android:textSize="@dimen/near_me_txt_size"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/maxPriceSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="2000"
+                    android:progress="2000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/search_button_style"
+                android:text="@string/search_activity_title"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

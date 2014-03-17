@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_bg">#8b8c24</color>
+    <color name="title_txt_color">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="heading_color">#999999</color>
+    <color name="line_color">#c4c4c4</color>
+    <color name="near_me_txt_color">#464646</color>
+    <color name="spinner_txt_color">#555555</color>
+    <color name="transparent2">#e6000000</color>
+    
+    <color name="default_img_color">#c4c4c4</color>
+    
+    <color name="contact_color1">#686868</color>
+    <color name="Contact_color2">#3089af</color>
+    
+    <color name="availablity_color1">#7e7e92</color>
+    <color name="availablity_color2">#0098b6</color>
+    
+    <color name="availablity_color_bg">#F3F781</color>
+    <color name="availablity_table_header_color">#000000</color>
+    <color name="availablity_table_text_color">#4B610B</color>
+    
+    <color name="transparent_100">#50000000</color>
+</resources>

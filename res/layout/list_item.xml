@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+ 
+       <ImageView
+          android:id="@+id/listImage"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:scaleType="fitXY"
+          android:layout_margin="10dp"
+          android:background="#ffcccccc" />
+ 
+       <TextView
+          android:id="@+id/listTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/listImage"
+          android:layout_toRightOf="@+id/listImage"
+          android:text="A List item title"
+          android:singleLine="true"
+          android:textSize="15sp"
+          android:textColor="@color/title_bg"
+          android:textStyle="bold" />
+ 
+       <TextView
+          android:id="@+id/listDescription"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/listTitle"
+          android:layout_marginTop="5dp"
+          android:maxLines="4"
+          android:layout_toRightOf="@+id/listImage"
+          android:text="The List item description"
+          android:textSize="14sp" />
+       
+       <TextView
+          android:id="@+id/listDistance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/listDescription"
+          android:layout_marginTop="5dp"
+          android:maxLines="1"
+          android:layout_toRightOf="@+id/listImage"
+          android:text="1.4 km"
+          android:textSize="14sp" />
+ 
+</RelativeLayout>

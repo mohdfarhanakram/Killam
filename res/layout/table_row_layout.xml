@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:weightSum="3" >
+
+    <TextView
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:id="@+id/bedRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Bedrooms"
+        android:textColor="@color/availablity_table_text_color"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Price"
+        android:textColor="@color/availablity_table_text_color"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <TextView
+         android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:id="@+id/available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Available"
+        android:textColor="@color/availablity_table_text_color"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/applyButton"
+         android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="#4B8A08"
+        android:gravity="center"
+        android:text="Apply Now"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</TableRow>

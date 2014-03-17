@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+
+    <item name="android:tabWidgetStyle">@style/TabWidgetAppTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarAppTheme</item>
+    <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+
+  </style>
+  
+</resources>

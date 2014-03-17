@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Apartment</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_activity_title">Search</string>
+    <string name="location_title">LOCATION</string>
+    <string name="bedroom_title">BEDROOMS</string>
+    <string name="price_title">PRICE</string>
+    <string name="near_me">Near Me</string>
+    <string name="txt_province">Province</string>
+    <string name="txt_city">City</string>
+    <string name="txt_address">Address</string>
+    <string name="to">to</string>
+    <string name="min_txt">Min</string>
+    <string name="max_txt">Max</string>
+    <string name="appartment_title">Apartments - List</string>
+    <string name="contact_title">Contact</string>
+    
+    
+    <string-array name="province_array">
+        <item>Alberta</item>
+        <item>British Columbia</item>
+        <item>Manitoba</item>
+        <item>New Brunswick</item>
+        <item>Newfoundland and Labrador</item>
+        <item>Nova Scotia</item>
+        <item>Nunavut</item>
+        <item>Ontario</item>
+        <item>Prince Edward Island</item>
+        <item>Quebec</item>
+        <item>Saskatchewan</item>
+        <item>Northwest Territories</item>
+        <item>Yukon</item>
+    </string-array>
+
+</resources>

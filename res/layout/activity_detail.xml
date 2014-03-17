@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_title" >
+    </include>
+
+    <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/myindicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mypager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_button_height"
+        android:layout_weight="0" >
+
+        <RelativeLayout
+            android:id="@+id/callButtonLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_weight="1"
+            android:background="@color/title_bg" >
+
+            <ImageView
+                android:paddingLeft="10dp"
+                android:layout_margin="5dp"
+                android:id="@+id/iconImgview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/callicon" />
+
+            <TextView
+                
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iconImgview1"
+                android:textColor="@color/white"
+                android:text="Call"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_weight="0" />
+
+        <RelativeLayout
+            android:id="@+id/emailButtonLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_weight="1"
+            android:background="@color/title_bg" >
+
+            <ImageView
+                android:paddingLeft="10dp"
+                android:layout_margin="5dp"
+                android:id="@+id/iconImgview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emailicon" />
+
+            <TextView
+                
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iconImgview"
+                android:textColor="@color/white"
+                android:text="Email"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

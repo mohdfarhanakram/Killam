@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- title font size -->
+    <dimen name="txt_title_size">20sp</dimen>
+    <dimen name="heading_size">15sp</dimen>
+    <dimen name="near_me_txt_size">15sp</dimen>
+    <dimen name="spinner_txt_size">15sp</dimen>
+    
+    <dimen name="tab_host_default_height">48dp</dimen>
+    
+    <dimen name="overview_baner_img_height">170dp</dimen>
+    <dimen name="bottom_button_height">40dp</dimen>
+</resources>
